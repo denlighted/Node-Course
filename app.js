@@ -14,6 +14,7 @@ const globalErrorHandler = require('./starter/controllers/errorController');
 const appError = require('./starter/utils/appError');
 const path  = require('path');
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
 
 const app = express();
 
@@ -67,6 +68,8 @@ app.use(hpp({
       'maxGroupSize'
     ]
 }));
+app.use(compression());
+
 app.use(mongoSanitize());
 app.use(xss());
 
