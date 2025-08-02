@@ -1,0 +1,2 @@
+'use strict'
+const locations = JSON.parse(document.getElementById('map').dataset.locations);

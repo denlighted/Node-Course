@@ -1,0 +1,56 @@
+{
+  "name": "4-natours",
+  "version": "1.0.0",
+  "description": "Udemy course project",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon server.js",
+    "start:prod": "cross-env NODE_ENV=production nodemon server.js",
+    "debug": "ndb server.js",
+    "watch:js": "parcel watch ./starter/public/js/index.js --out-dir ./starter/public/js --out-file bundle.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Quaswexnt/node-express-udemy.git"
+  },
+  "keywords": [
+    "sabaka"
+  ],
+  "author": "Denys",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Quaswexnt/node-express-udemy/issues"
+  },
+  "homepage": "https://github.com/Quaswexnt/node-express-udemy#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "axios": "^1.10.0",
+    "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-rate-limit": "^7.5.1",
+    "helmet": "^8.1.0",
+    "hpp": "^0.2.3",
+    "html-to-text": "^9.0.5",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.15.0",
+    "mongoose": "^8.12.1",
+    "morgan": "^1.10.0",
+    "multer": "^2.0.2",
+    "nodemailer": "^7.0.3",
+    "pug": "^3.0.3",
+    "sharp": "^0.34.3",
+    "slugify": "^1.6.6",
+    "stripe": "^18.3.0",
+    "validator": "^13.15.15",
+    "xss-clean": "^0.1.4"
+  },
+  "devDependencies": {
+    "ndb": "^1.1.5",
+    "nodemon": "^3.1.9",
+    "parcel-bundler": "^1.12.5"
+  }
+}
