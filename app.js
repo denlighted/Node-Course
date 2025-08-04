@@ -18,6 +18,8 @@ const compression = require('compression');
 
 const app = express();
 
+app.enable('trust proxy')
+
 app.use(express.static(path.join(__dirname, 'starter', 'public')));
 
 
