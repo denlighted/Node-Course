@@ -1,6 +1,7 @@
 import { login,logout } from './login';
 import {bookTour} from './stripe'
 import { updateSettings } from './updateSettings';
+import {showAlert} from './alerts';
 
 
 const loginForm = document.querySelector('.form--login');
@@ -61,4 +62,8 @@ if(bookBtn){
     })
 }
 
+const alertMessage = document.querySelector('body').dataset.alert;
+if(alert){
+  showAlert('success',alertMessage,20);
+}
 
