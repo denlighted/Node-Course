@@ -15,6 +15,7 @@ const appError = require('./starter/utils/appError');
 const path  = require('path');
 const cookieParser = require('cookie-parser');
 const compression = require('compression');
+const cors = require('cors');
 
 const app = express();
 
@@ -40,6 +41,11 @@ app.use(
 
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname,'views'));
+
+app.use(cors());
+
+app.options('*', cors());
+//app.options('/api/v1/tours/:id',cors());
 
 
 if (process.env.NODE_ENV === 'development') {
